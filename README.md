@@ -1,2 +1,2 @@
 # nodebase
-https://github.com/sheminusminus/nodebase
+a base for a web and server nodejs project.
