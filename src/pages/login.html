@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
-
 <head>
-    <title id="Title">Fitness Challenge</title>
+    <title id="Title">Login Page</title>
     <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
     <script>
         // Initialize Firebase
@@ -53,57 +52,20 @@
 </head>
 
 <body>
-
-    <h1><label>Fitness Challenge</label></h1>
-    <br>
-    <form action="exerciseForm">
-        <div class='rounded'>
-            </br>
-            <label>Username:</label>
-            <input type="text" name="Username" id="usernameID"><br>
-
-            <br>
-            <label>Exercise:</label>
-            <select id="exerciseID">
-      <option value="Row">Row</option>
-      <option value="Run">Run</option>
-      <option value="Double-Unders">Double-Unders</option>
-      <option value="Push-ups">Push-ups</option>
-    </select>
-
-    <input type="button" id="addBtn" value="+" onclick="createExercise();">
-
-            <label>Reps:</label>
-            <select id="repsID">
-      <option value="5">5</option>
-      <option value="10">10</option>
-      <option value="25">25</option>
-      <option value="50">50</option>
-    </select>
-
-            <label>Sets:</label>
-            <select id="setsID">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-            <br/>
-            <br/>
-
-            <label>Result:</label>
-            <input type="text" name="result" id="resultID"></br>
-            <br>
-
-            <p><input type="button" id="addBtn" value="Add Exercise" onclick="addExercise();"></p>
-        </div>
-
-    </form>
+    <h1><label>Login Page</label></h1>
     </br>
-    <div id='container'>
-    </div>
-    <script>
+    <label class="labels" id="emailLabel">Email:</label>
+    <input type="text" name="email" id="emailID">
+    </br>
+    <label class="labels" id="passwordLabel">Password:</label>
+    <input type="text" name="password" id="passwordID">
+    </br>
+    </br>
+    <input type='button' value="Register" id="registerID" onclick="registerUser()">
+    <input type='button' value="Login" id="loginID" onclick="loginUser()">
+    <input type='button' value="Sign out" id="signOutID" onclick="signOutUser()">
+    
+<script>
 var da = ""
 var user = ""
 var usernameArr = []
@@ -265,5 +227,4 @@ function editResult(index) {
 	
 </script>
 </body>
-
 </html>
